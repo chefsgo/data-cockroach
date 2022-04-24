@@ -1,13 +1,13 @@
 package data_postgres
 
 import (
-	"github.com/chefsgo/chef"
+	"github.com/chefsgo/data"
 	dp "github.com/chefsgo/data-postgres"
 )
 
 func init() {
 	driver := dp.Driver()
-	chef.Register("timescale", driver)
-	chef.Register("timescaledb", driver)
-	chef.Register("tsdb", driver)
+	data.Register("timescale", driver)
+	data.Register("timescaledb", driver)
+	data.Register("tsdb", driver)
 }
